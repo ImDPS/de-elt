@@ -19,8 +19,8 @@ def wait_for_postgres(host, max_retries=5, delay_seconds=5):
             )
             time.sleep(delay_seconds)
 
-        print("Max retries reached. Exiting")
-        return False
+    print("Max retries reached. Exiting")
+    return False
     
 if not wait_for_postgres(host="source_postgres"):
     exit(1)
